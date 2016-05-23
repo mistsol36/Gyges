@@ -41,7 +41,7 @@ private[core] object AppWidgetCtrlFactory {
     */
   def create(id: String): IsAppWidgetController = {
     val opt = appWidgetConfigs.find(conf => conf.id.equals(id))
-    if (opt.isEmpty) throw IllegalArgumentException
+    if (opt.isEmpty) throw new IllegalArgumentException("id's not found")
     val c = Class.forName(opt.get.fqcn)
     c.newInstance().asInstanceOf[IsAppWidgetController]
   }
