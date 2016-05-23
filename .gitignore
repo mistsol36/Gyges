@@ -1,2 +1,13 @@
+# for Java
 target/
+
+# for IDE: intellij
 .idea/
+
+# for IDE: eclipse
+.classpath
+.project
+
+# for Windows and OSX
+*~
+.DS_Store
